@@ -1,0 +1,246 @@
+<div *ngIf="_userHubService.showSpinner | async" id="pause" class="d-flex align-items-center justify-content-center"
+  style=" position: relative;">
+  <div id="spinner"></div>
+</div>
+<div *ngIf="!(_userHubService.showSpinner | async)" class="content-header">
+  <div class="col-md-6">
+    <ul class="ulbutton" (click)="openModalAddUser()">
+      <a class="abutton" title="Thêm" role="button">
+        Tạo tài khoản
+        <i class="fas fa-plus"></i>
+      </a>
+    </ul>
+  </div>
+</div>
+<div *ngIf="!(_userHubService.showSpinner | async)" class="content-center">
+  <table class="table table-sm table-fixed table-hover">
+    <thead style="background-color: #dbdbdb80;">
+      <tr class="row">
+        <th class="col-sm-1">Thứ tự</th>
+        <th class="col-sm-2">Thời gian</th>
+        <th class="col-sm-2">Tài khoản</th>
+        <th class="col-sm-2">Email</th>
+        <th class="col-sm-2">Người tạo</th>
+        <th class="col-sm-2">Ghi chú</th>
+        <th class="col-sm-1">Chức năng</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of GetAllAccount ;let i = index" class="row">
+        <td class="col-sm-1" style="font-weight:bold;">{{i+1}}</td>
+        <td class="col-sm-2">
+          <span>{{item.updated_at | date:'HH:mm dd-MM-yy'}}</span>
+        </td>
+        <td class="col-sm-2">
+          <span>{{item.userName}}</span>
+        </td>
+        <td class="col-sm-2">
+          <span>{{item.email}}</span>
+        </td>
+        <td class="col-sm-2">
+          <span>{{item.created_by}}</span>
+        </td>
+        <td class="col-sm-2">
+          <span>{{item.note}}</span>
+        </td>
+        <td class="col-sm-1">
+          <a class="btn" (click)="modalopenEdit(item)">
+            <i class="fa fa-pencil-square-o"></i>
+          </a>
+          <a class="btn text-danger" style="margin-left: 15px;" (click)="openDeleteUser(item)">
+            <i class="far fa-trash-alt"></i>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="btn-group" role="group">
+    <!-- <button class="btn btn-secondary pagding-sw"  [disabled]="!canMoveToPreviousPage" (click)="moveToFirstPage()"><i class="fa fa-angle-double-left"></i></button> -->
+    <button class="btn btn-secondary pagding-sw" #PreviousPage_userhub (click)="moveToPreviousPage_account()"><i
+        class="fa fa-angle-left"></i></button>
+    <button class="btn btn-secondary pagding-sw" disabled style="width:70px">{{currentPage_account}} /
+      {{pageCount_account}}</button>
+    <button class="btn btn-secondary pagding-sw" #NextPage_userhub (click)="moveToNextPage_account()"><i
+        class="fa fa-angle-right"></i></button>
+    <!-- <button class="btn btn-secondary pagding-sw"  [disabled]="!canMoveToNextPage" (click)="moveToLastPage()"><i class="fa fa-angle-double-right"></i></button> -->
+    <button class="btn btn-secondary " style="width:70px" disabled>Tổng: {{rowCount_account}}</button>
+  </div>
+</div>
+<app-modal #modalRoot [width]="800" [zIndex]="zIndex" [backgroundcolor]="'#007bff'" [keydownesc]="true"
+  [closemodal]="true" [maximizable]="false" [maximized]="false" [south]="false" [east]="false" [southEast]="false">
+  <!-- <ng-container class="app-t-header">
+     
+    </ng-container> -->
+  <ng-container class="app-modal-body">
+    <form class="emp-form" [formGroup]="addUser" (ngSubmit)="onSubmitUser()">
+      <div class="form-row">
+        <div class="form-group col-md-6 pm-15">
+          <label class="mf-0-small">Tài khoản</label>
+          <input #taikhoan class="form-control form-control-sm" autocomplete="off" formControlName="username"
+            placeholder="tài khoản">
+        </div>
+        <div class="form-group col-md-6 pm-15">
+          <label class="mf-0-small">Email</label>
+          <input #email class="form-control form-control-sm" autocomplete="off" formControlName="email"
+            placeholder="email">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-8 pm-15">
+          <label class="mf-0-small">Password</label>
+          <input #password class="form-control form-control-sm" autocomplete="off" formControlName="password"
+            placeholder="mật khẩu">
+        </div>
+        <div class="form-group col-md-4 pm-15" style="padding-top: 5px;">
+          <label class="mf-0-small">Reset Password</label>
+          <button #buttonRefreshPassWord type="button" class="btn btn-block btn-secondary btn-sm"
+            (click)="refreshPass()">
+            <i class="fa fa-repeat"></i>Reset Mật Khẩu Tài Khoản</button>
+        </div>
+      </div>
+      <div class="form-row" #TableBoDieuKhien>
+        <!-- <label class="mf-0-small">Tên bộ điều khiển</label>
+                <select class="form-control form-control-sm" #ChangeHubCode
+                    (change)="onEventHubCode($event.target.value)">
+                    <option value="null" selected>--Tên Bộ Điều Khiển--</option>
+                    <option *ngFor="let item of gethub" value="{{item.id}}#{{item.code_hub}}#{{item.password_client}}">{{item.code_hub}}</option>
+                </select> -->
+        <p>Bộ điều khiển:</p>
+        <table class="table table-sm table-bordered">
+          <thead style=" color: #007bff;">
+            <tr>
+              <td colspan="5">
+                <div style="display: inline-block; font-weight:bold;padding-top:10px;font-size: smaller;">Mã Điều khiển
+                </div>
+              <td colspan="5">
+                <div style="display: inline-block; font-weight:bold;padding-top:10px;font-size: smaller;">Căn hộ</div>
+              </td>
+              <td style="width: 60px;">
+                <div style="font-weight:bold;">
+                  <ul #ModelAddUserHub class="ulbutton" style="padding:5px;" (click)="openModelAddUserHub()">
+                    <a class="abutton" title="Thêm Hub" role="button">
+                      <i class="fas fa-plus" style="color: #ff6313"></i>
+                    </a>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </thead>
+          <div *ngIf="_userHubService.showSpinnerUserHub | async" id="pause"
+            class="d-flex align-items-center justify-content-center" style=" position: relative;">
+            <div id="spinner"></div>
+          </div>
+          <tbody *ngIf="!(_userHubService.showSpinnerUserHub | async)">
+            <tr *ngFor="let item of GetAllUserHub ">
+              <td colspan="5">{{item.hub_code}}</td>
+              <td colspan="5">{{item.note}}</td>
+              <td>
+                <div style="font-weight:bold;">
+                  <a class="btn text-danger" title="Xóa" style="margin-left: 15px;" (click)="openDeleteUserHub(item)">
+                    <i class="far fa-trash-alt"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="form-group pm-15">
+        <label class="mf-0-small">Ghi chú</label>
+        <input class="form-control form-control-sm" autocomplete="off" formControlName="note" placeholder="ghi chú">
+      </div>
+      <div class="form-row ">
+        <div class="form-group col-md-8">
+          <button #statusSaveUserHub type="submit" class="btn btn-block btn-info btn-sm">
+            <i class="fa fa-floppy-o"></i> Lưu</button>
+        </div>
+        <div class="form-group col-md-4">
+          <button #buttonRefresh type="button" class="btn btn-block btn-secondary btn-sm">
+            <i class="fa fa-repeat"></i> Làm mới</button>
+        </div>
+      </div>
+    </form>
+
+    <!-- child-model -->
+    <app-modal #childModal [modalTitle]="'Bộ điều khiển'" [width]="400" [zIndex]="zIndex+2"
+      [backgroundcolor]="'#007bff'" [keydownesc]="true" [closemodal]="false" [maximizable]="false" [maximized]="false"
+      [south]="false" [east]="false" [southEast]="false">
+      <ng-container class="app-t-header">
+        <div>
+          <button class="btn btn-block btn-info btn-sm" (click)="addCredsBodieukhien()">
+            <i class="fas fa-plus-circle"></i>
+            Tạo</button></div>
+      </ng-container>
+      <ng-container class="app-modal-body">
+        <form [formGroup]="formBodieukhien">
+          <div formArrayName="credentialsBodieukhien">
+            <table class="table table-sm table-bordered">
+              <tbody>
+                <tr *ngFor="let creds of getArrayControlsBodieukhien(); let i = index" [formGroupName]="i">
+                  <td style="position: relative;">
+                    <label class="mf-0-small">Tên bộ điều khiển</label>
+                    <app-filter-hub [dataSet]="gettenhub" [placeholderText]="'Tên Hub'" [maxLen]="6"
+                      (typeahead)="gethubid($event,i)">
+                    </app-filter-hub>
+                  </td>
+                  <td style="padding-top: 20px;">
+                    <span class="remove" (click)="removeGroupBodieukhien(i)">
+                      <img width="24" height="24" src="assets/delete-icon.png">
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </form>
+      </ng-container>
+      <ng-container class="app-modal-footer">
+        <div class="form-row ">
+          <div class="form-group col-md-8">
+            <button #onSubBodieukhien class="btn btn-block btn-info btn-sm" type="button" (click)="onSubmitBodieukhien()">Lưu</button>
+          </div>
+          <div class="form-group col-md-4">
+            <button type="button" class="btn btn-block btn-secondary btn-sm" (click)="childModal.hide()">Thoát</button>
+          </div>
+        </div>
+        <input type="hidden" (click)="childModal.hide()" id="childModalBodieukhienClose">
+        <input type="hidden" (click)="childModal.show()" id="childModalBodieukhienShow">
+      </ng-container>
+    </app-modal>
+    <!-- end -->
+  </ng-container>
+  <ng-container class="app-modal-footer">
+    <input type="hidden" (click)="modalRoot.show()" id="modalRootShow">
+    <input type="hidden" (click)="modalRoot.hide()" id="modalRootClose">
+  </ng-container>
+</app-modal>
+<app-modal #modalDelete [modalTitle]="'Bạn có muốn xóa không ?'" [width]="400" [zIndex]="zIndex+2"
+  [backgroundcolor]="'#007bff'" [keydownesc]="true" [closemodal]="false" [maximizable]="false" [maximized]="false"
+  [south]="false" [east]="false" [southEast]="false">
+  <ng-container class="app-t-header">
+  </ng-container>
+  <ng-container class="app-modal-body">
+    <div class="form-row" #deleteAccount>
+      <div class="form-group">Tài khoản: {{selectUserHub.userName}}</div>
+    </div>
+    <div class="form-row" #deleteUserHub>
+      <div class="form-group">Hub:{{selectUserHub_Hub.hub_code}}</div>
+    </div>
+  </ng-container>
+  <ng-container class="app-modal-footer">
+    <button #ondeleteAccount type="button" (click)="onDeleteUser(selectUserHub.id)" style="width: 75px;"
+      class="btn btn-info btn-sm">
+      <i class="far fa-save tu"></i>
+      Xóa</button>
+    <button #ondeleteUserHub type="button" (click)="onDeleteUserHub(selectUserHub_Hub.id)" style="width: 75px;"
+      class="btn btn-info btn-sm">
+      <i class="far fa-save tu"></i>
+      Xóa</button>
+    <button type="button" class="btn btn-info btn-sm" style="float: right;" (click)="modalDelete.hide()">
+      <i class="far fa-times-circle"></i>
+      Thoát</button>
+    <input type="hidden" (click)="modalDelete.show()" id="modalDelete">
+    <input type="hidden" (click)="modalDelete.hide()" id="modalDeleteHide">
+  </ng-container>
+</app-modal>
+<app-toaster-container></app-toaster-container>

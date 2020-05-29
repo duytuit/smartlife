@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "gA86NL1bInN2J+9/ja6o6lxx+gOXKFsRAV5cOc7IY/NsZE60cgin2AZaBgGrBXbNacSvFOYpkpWir0wrOgmlqA==",
+  "success": true,
+  "projectFilePath": "D:\\Dev\\backend\\DxmbAspNetCore\\ConsoleCreateAccountMqtt\\ConsoleCreateAccountMqtt.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,12 @@
+D:\Dev\backend\DxmbAspNetCore\SmartBuilding.Data\bin\Release\netcoreapp3.1\SmartBuilding.Data.deps.json
+D:\Dev\backend\DxmbAspNetCore\SmartBuilding.Data\bin\Release\netcoreapp3.1\SmartBuilding.Data.runtimeconfig.json
+D:\Dev\backend\DxmbAspNetCore\SmartBuilding.Data\bin\Release\netcoreapp3.1\SmartBuilding.Data.runtimeconfig.dev.json
+D:\Dev\backend\DxmbAspNetCore\SmartBuilding.Data\bin\Release\netcoreapp3.1\SmartBuilding.Data.dll
+D:\Dev\backend\DxmbAspNetCore\SmartBuilding.Data\bin\Release\netcoreapp3.1\SmartBuilding.Data.pdb
+D:\Dev\backend\DxmbAspNetCore\SmartBuilding.Data\obj\Release\netcoreapp3.1\SmartBuilding.Data.csprojAssemblyReference.cache
+D:\Dev\backend\DxmbAspNetCore\SmartBuilding.Data\obj\Release\netcoreapp3.1\SmartBuilding.Data.csproj.CoreCompileInputs.cache
+D:\Dev\backend\DxmbAspNetCore\SmartBuilding.Data\obj\Release\netcoreapp3.1\SmartBuilding.Data.AssemblyInfoInputs.cache
+D:\Dev\backend\DxmbAspNetCore\SmartBuilding.Data\obj\Release\netcoreapp3.1\SmartBuilding.Data.AssemblyInfo.cs
+D:\Dev\backend\DxmbAspNetCore\SmartBuilding.Data\obj\Release\netcoreapp3.1\SmartBuilding.Data.dll
+D:\Dev\backend\DxmbAspNetCore\SmartBuilding.Data\obj\Release\netcoreapp3.1\SmartBuilding.Data.pdb
+D:\Dev\backend\DxmbAspNetCore\SmartBuilding.Data\obj\Release\netcoreapp3.1\SmartBuilding.Data.genruntimeconfig.cache

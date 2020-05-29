@@ -1,0 +1,235 @@
+.content-center{
+  width: 100%;
+    display: inline-block; 
+    height: 83vh;
+}
+.content-left{
+  display: inline-table;
+  width: 25%;
+  text-align: center;
+}
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
+  border-bottom:0.5px solid rgb(196, 192, 192);
+}
+.table thead th{
+  vertical-align: bottom;
+  height: 37px;
+  padding: 0;
+}
+.table{
+  font-size: 0.8rem;
+}
+/* css text box input */
+.inp {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 280px;
+}
+.inp .label {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  font-size: 16px;
+  color: #9098a9;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transition: all 0.2s ease;
+}
+
+.inp .border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #07f;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+  transition: all 0.15s ease;
+}
+.inp input {
+  -webkit-appearance: none;
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  padding: 12px 0;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid #c8ccd4;
+  background: none;
+  border-radius: 0;
+  color: #223254;
+  transition: all 0.15s ease;
+}
+.inp input:hover {
+  background: rgba(34,50,84,0.03);
+}
+.inp input:not(:placeholder-shown) + span {
+  color: #5a667f;
+  transform: translateY(-17px) scale(0.75);
+}
+.inp input:focus {
+  background: none;
+  outline: none;
+}
+.inp input:focus + span {
+  color: #07f;
+  transform: translateY(-17px) scale(0.75);
+}
+.inp input:focus + span + .border {
+  transform: scaleX(1);
+}
+.mblock:hover{
+  width: 230px;
+  height:70px ;
+  margin: 5px;
+  background-color: antiquewhite;
+  border: 0.5px solid #95959583;
+  position: relative;
+  cursor: default;
+}
+.cblock{
+  text-align: left;
+  display: inline-flex;
+}
+.mblock{
+  width: 230px;
+  height: 70px;
+  margin: 5px;
+  display: inline-flex;
+  background-color:  rgb(176, 214, 247);
+  border: 0.5px solid #95959583;
+  position: relative;
+  cursor: default;
+}
+.phong-ktx{
+  display: inline;
+}
+.chi-tiet-phong{
+  display: inline-table;
+  width: 100%;
+  text-align: center;
+  font-weight:bold;
+}
+.doi-tuong{
+  display: inline-table;
+  width: 100%;
+}
+.tinh-trang{
+  display: inline-table;
+  width: 100%;
+}
+.chuc-nang{
+  text-align: right;
+  display: inline-table;
+  width: 40%;
+}
+.con-trong{
+  display: inline-table;
+  width: 60%;
+  margin-top: 0.2rem;
+  height: 27px;
+}
+
+.btn{
+  padding: 1px 1px;
+  cursor: pointer;
+}
+.content-header{
+  background-color: #dbdbdb80;
+  border: 0.09rem solid rgb(221, 213, 213);
+  height: 48px;
+  margin-bottom: 5px;
+ }
+ .pm-15{
+  position: relative;
+  margin-top: -15px;
+ }
+ .mf-0-small{
+  margin: 0;
+  font-size: x-small;
+  color: #007bff;
+  font-weight: bold;
+ }
+ .abutton:hover{
+  background-color:rgb(196, 192, 192);
+}
+.abutton{
+  color: #666;border:0.09rem solid rgb(221, 213, 213);border-radius: 3px;padding: 4px 12px 5px;
+}
+.ulbutton{
+  padding: 10px;
+  margin:0;
+  display: inline-block;
+  cursor: pointer;
+}
+.fa-plus,.fa-retweet,.fa-file-export,.fa-bullhorn,.fa-pencil-square-o,.fa-save,.fa-file-signature,.fa-flag,.fa-check-square,.fa-square{
+  color: #2e5075;
+}
+.chuc-nang{
+  text-align: right;
+  display: inline-table;
+}
+
+/* add toggle button*/
+.toggle-global {
+  display: block;
+  position: relative;
+  width: 80px;
+  float: right;
+}
+
+input[type="checkbox"] {
+  display: none; 
+}
+
+
+.toggle-button-switch {
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 35px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 100;
+  transition: left 0.3s;
+}
+
+
+.toggle-button-text {
+  overflow: hidden;
+  background-color: #fc3164;
+  border-radius: 25px;
+  box-shadow: 2px 2px 5px 0 rgba(50, 50, 50, 0.75);
+  transition: background-color 0.3s;
+}
+
+
+.toggle-button-text-on,
+.toggle-button-text-off {
+  float: left;
+  width: 50%;
+  height: 100%;
+  line-height: 25px;
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+
+input[type="checkbox"]:checked ~ .toggle-button-switch {
+  left: 43px;
+}
+
+
+input[type="checkbox"]:checked ~ .toggle-button-text {
+  background-color: #3dbf87;
+}
+

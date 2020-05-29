@@ -1,0 +1,7 @@
+
+<div class="toast toast-{{toast.type}}" 
+[ngStyle]="{'bottom': i===0?'47px' :i*85+47+'px' }">
+<h5 class="toast-heading" style="text-align: center;">{{toast.title}}</h5>
+<h5 >{{toast.body}}</h5>
+<a class="close" (click)="remove.emit(i)">&times;</a>
+</div>

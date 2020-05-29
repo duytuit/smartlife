@@ -1,0 +1,457 @@
+2020-05-26 23:48:59.995 +07:00 [Information] Starting IdentityServer4 version "3.1.3.0"
+2020-05-26 23:49:00.211 +07:00 [Fatal] No storage mechanism for clients specified. Use the 'AddInMemoryClients' extension method to register a development version.
+2020-05-26 23:49:00.243 +07:00 [Fatal] Application startup exception
+System.InvalidOperationException: No storage mechanism for clients specified. Use the 'AddInMemoryClients' extension method to register a development version.
+   at Microsoft.AspNetCore.Builder.IdentityServerApplicationBuilderExtensions.TestService(IServiceProvider serviceProvider, Type service, ILogger logger, String message, Boolean doThrow)
+   at Microsoft.AspNetCore.Builder.IdentityServerApplicationBuilderExtensions.Validate(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Builder.IdentityServerApplicationBuilderExtensions.UseIdentityServer(IApplicationBuilder app, IdentityServerMiddlewareOptions options)
+   at Auth.Server.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory) in D:\Dev\Auth.Server\Auth.Server\Startup.cs:line 140
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass13_0.<UseStartup>b__2(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISServerSetupFilter.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2020-05-26 23:49:29.935 +07:00 [Error] Exception removing expired grants: "Cannot access a disposed object.
+Object name: 'IServiceProvider'."
+2020-05-26 23:51:07.589 +07:00 [Information] Starting IdentityServer4 version "3.1.3.0"
+2020-05-26 23:51:07.808 +07:00 [Information] Using the default authentication scheme "Identity.Application" for IdentityServer
+2020-05-26 23:51:19.973 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-26 23:51:20.164 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-26 23:51:20.198 +07:00 [Error] Invalid client configuration for client "angular_spa": "AllowedCorsOrigins contains invalid origin: http://localhost:8084/cmssmartlife"
+2020-05-26 23:51:20.252 +07:00 [Information] InvalidClientConfigurationEvent { ClientId: "angular_spa", ClientName: "Angular SPA", Category: "Error", Name: "Invalid Client Configuration", EventType: Error, Id: 3001, Message: "AllowedCorsOrigins contains invalid origin: http://localhost:8084/cmssmartlife", ActivityId: "8000004c-0001-fe00-b63f-84710c7967bb", TimeStamp: 05/26/2020 16:51:20, ProcessId: 17216, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-26 23:51:20.279 +07:00 [Error] Unknown client or not enabled: "angular_spa"
+AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "24861e6b3a8a4f23b028b46575bb855c"), ("nonce": "36c5da2fba0b406ba94fc3cdaf1a966a")] }
+2020-05-26 23:51:20.283 +07:00 [Error] Request validation failed
+2020-05-26 23:51:20.283 +07:00 [Information] AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "24861e6b3a8a4f23b028b46575bb855c"), ("nonce": "36c5da2fba0b406ba94fc3cdaf1a966a")] }
+2020-05-26 23:51:20.298 +07:00 [Information] TokenIssuedFailureEvent { ClientId: "angular_spa", ClientName: null, RedirectUri: null, Endpoint: "Authorize", SubjectId: null, Scopes: "", GrantType: null, Error: "unauthorized_client", ErrorDescription: "Unknown client or client not enabled", Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "8000004c-0001-fe00-b63f-84710c7967bb", TimeStamp: 05/26/2020 16:51:20, ProcessId: 17216, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-26 23:51:39.137 +07:00 [Information] Removing 0 grants
+2020-05-26 23:51:39.160 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:52:09.251 +07:00 [Information] Removing 0 grants
+2020-05-26 23:52:09.253 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:52:39.284 +07:00 [Information] Removing 0 grants
+2020-05-26 23:52:39.286 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:53:09.305 +07:00 [Information] Removing 0 grants
+2020-05-26 23:53:09.316 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:53:10.745 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-26 23:53:10.771 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-26 23:53:10.773 +07:00 [Error] Invalid client configuration for client "smartlife_spa": "AllowedCorsOrigins contains invalid origin: http://localhost:8085/smartlife"
+2020-05-26 23:53:10.775 +07:00 [Information] InvalidClientConfigurationEvent { ClientId: "smartlife_spa", ClientName: "smartlife SPA", Category: "Error", Name: "Invalid Client Configuration", EventType: Error, Id: 3001, Message: "AllowedCorsOrigins contains invalid origin: http://localhost:8085/smartlife", ActivityId: "8000004e-0001-fe00-b63f-84710c7967bb", TimeStamp: 05/26/2020 16:53:10, ProcessId: 17216, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-26 23:53:10.778 +07:00 [Error] Unknown client or not enabled: "smartlife_spa"
+AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "smartlife_spa"), ("redirect_uri": "http://localhost:8085/smartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "c2867b0bf70a4f2e802e3b52c6fc0f6c"), ("nonce": "8069f96366bc4bfc9f76d28463f2f779")] }
+2020-05-26 23:53:10.779 +07:00 [Error] Request validation failed
+2020-05-26 23:53:10.779 +07:00 [Information] AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "smartlife_spa"), ("redirect_uri": "http://localhost:8085/smartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "c2867b0bf70a4f2e802e3b52c6fc0f6c"), ("nonce": "8069f96366bc4bfc9f76d28463f2f779")] }
+2020-05-26 23:53:10.780 +07:00 [Information] TokenIssuedFailureEvent { ClientId: "smartlife_spa", ClientName: null, RedirectUri: null, Endpoint: "Authorize", SubjectId: null, Scopes: "", GrantType: null, Error: "unauthorized_client", ErrorDescription: "Unknown client or client not enabled", Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "8000004e-0001-fe00-b63f-84710c7967bb", TimeStamp: 05/26/2020 16:53:10, ProcessId: 17216, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-26 23:53:39.341 +07:00 [Information] Removing 0 grants
+2020-05-26 23:53:39.353 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:54:09.368 +07:00 [Information] Removing 0 grants
+2020-05-26 23:54:09.371 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:54:39.381 +07:00 [Information] Removing 0 grants
+2020-05-26 23:54:39.390 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:55:09.416 +07:00 [Information] Removing 0 grants
+2020-05-26 23:55:09.421 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:55:39.456 +07:00 [Information] Removing 0 grants
+2020-05-26 23:55:39.460 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:56:09.484 +07:00 [Information] Removing 0 grants
+2020-05-26 23:56:09.491 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:56:39.518 +07:00 [Information] Removing 0 grants
+2020-05-26 23:56:39.531 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:57:09.553 +07:00 [Information] Removing 0 grants
+2020-05-26 23:57:09.557 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:57:39.570 +07:00 [Information] Removing 0 grants
+2020-05-26 23:57:39.575 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:58:09.582 +07:00 [Information] Removing 0 grants
+2020-05-26 23:58:09.588 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:58:39.605 +07:00 [Information] Removing 0 grants
+2020-05-26 23:58:39.611 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:59:09.630 +07:00 [Information] Removing 0 grants
+2020-05-26 23:59:09.634 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:59:39.642 +07:00 [Information] Removing 0 grants
+2020-05-26 23:59:39.647 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 00:00:09.668 +07:00 [Information] Removing 0 grants
+2020-05-27 00:00:09.671 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 00:00:39.678 +07:00 [Information] Removing 0 grants
+2020-05-27 00:00:39.680 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 00:01:09.697 +07:00 [Information] Removing 0 grants
+2020-05-27 00:01:09.698 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 00:01:39.702 +07:00 [Information] Removing 0 grants
+2020-05-27 00:01:39.706 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 00:02:09.716 +07:00 [Information] Removing 0 grants
+2020-05-27 00:02:09.718 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 00:02:39.735 +07:00 [Information] Removing 0 grants
+2020-05-27 00:02:39.736 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 00:03:09.767 +07:00 [Information] Removing 0 grants
+2020-05-27 00:03:09.777 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 00:03:39.786 +07:00 [Information] Removing 0 grants
+2020-05-27 00:03:39.788 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 00:04:09.797 +07:00 [Information] Removing 0 grants
+2020-05-27 00:04:09.800 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 00:04:39.815 +07:00 [Information] Removing 0 grants
+2020-05-27 00:04:39.817 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 00:05:09.827 +07:00 [Information] Removing 0 grants
+2020-05-27 00:05:09.829 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 00:05:39.862 +07:00 [Information] Removing 0 grants
+2020-05-27 00:05:39.871 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 05:23:49.031 +07:00 [Information] Removing 0 grants
+2020-05-27 05:23:49.034 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 05:24:19.037 +07:00 [Information] Removing 0 grants
+2020-05-27 05:24:19.042 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 05:24:49.045 +07:00 [Information] Removing 0 grants
+2020-05-27 05:24:49.046 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 05:25:19.050 +07:00 [Information] Removing 0 grants
+2020-05-27 05:25:19.055 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 05:25:49.083 +07:00 [Information] Removing 0 grants
+2020-05-27 05:25:49.103 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 05:26:19.205 +07:00 [Information] Removing 0 grants
+2020-05-27 05:26:19.271 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 05:26:49.414 +07:00 [Information] Removing 0 grants
+2020-05-27 05:26:49.437 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 05:27:19.512 +07:00 [Information] Removing 0 grants
+2020-05-27 05:27:19.518 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 05:27:49.532 +07:00 [Information] Removing 0 grants
+2020-05-27 05:27:49.537 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 05:28:19.548 +07:00 [Information] Removing 0 grants
+2020-05-27 05:28:19.549 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 05:28:49.563 +07:00 [Information] Removing 0 grants
+2020-05-27 05:28:49.567 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 05:29:19.577 +07:00 [Information] Removing 0 grants
+2020-05-27 05:29:19.579 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 05:29:49.590 +07:00 [Information] Removing 0 grants
+2020-05-27 05:29:49.598 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 05:30:19.614 +07:00 [Information] Removing 0 grants
+2020-05-27 05:30:19.636 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 05:30:49.644 +07:00 [Information] Removing 0 grants
+2020-05-27 05:30:49.648 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 05:31:19.670 +07:00 [Information] Removing 0 grants
+2020-05-27 05:31:19.678 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 10:09:49.958 +07:00 [Information] Starting IdentityServer4 version "3.1.3.0"
+2020-05-27 10:09:50.002 +07:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-05-27 10:09:50.007 +07:00 [Information] Using the default authentication scheme "Identity.Application" for IdentityServer
+2020-05-27 10:10:06.132 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 10:10:06.297 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 10:10:06.329 +07:00 [Error] Invalid client configuration for client "angular_spa": "AllowedCorsOrigins contains invalid origin: http://localhost:8084/cmssmartlife"
+2020-05-27 10:10:06.387 +07:00 [Information] InvalidClientConfigurationEvent { ClientId: "angular_spa", ClientName: "Angular SPA", Category: "Error", Name: "Invalid Client Configuration", EventType: Error, Id: 3001, Message: "AllowedCorsOrigins contains invalid origin: http://localhost:8084/cmssmartlife", ActivityId: "80000052-0000-f800-b63f-84710c7967bb", TimeStamp: 05/27/2020 03:10:06, ProcessId: 2932, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 10:10:06.427 +07:00 [Error] Unknown client or not enabled: "angular_spa"
+AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "e97327be12db4ba9b0bc13dfda67b3b8"), ("nonce": "1c893ce036f249f694a0d10474c63d19")] }
+2020-05-27 10:10:06.432 +07:00 [Error] Request validation failed
+2020-05-27 10:10:06.433 +07:00 [Information] AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "e97327be12db4ba9b0bc13dfda67b3b8"), ("nonce": "1c893ce036f249f694a0d10474c63d19")] }
+2020-05-27 10:10:06.446 +07:00 [Information] TokenIssuedFailureEvent { ClientId: "angular_spa", ClientName: null, RedirectUri: null, Endpoint: "Authorize", SubjectId: null, Scopes: "", GrantType: null, Error: "unauthorized_client", ErrorDescription: "Unknown client or client not enabled", Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "80000052-0000-f800-b63f-84710c7967bb", TimeStamp: 05/27/2020 03:10:06, ProcessId: 2932, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 10:11:18.576 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 10:11:18.609 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 10:11:18.611 +07:00 [Error] Invalid client configuration for client "angular_spa": "AllowedCorsOrigins contains invalid origin: http://localhost:8084/cmssmartlife"
+2020-05-27 10:11:18.611 +07:00 [Information] InvalidClientConfigurationEvent { ClientId: "angular_spa", ClientName: "Angular SPA", Category: "Error", Name: "Invalid Client Configuration", EventType: Error, Id: 3001, Message: "AllowedCorsOrigins contains invalid origin: http://localhost:8084/cmssmartlife", ActivityId: "80000054-0000-f800-b63f-84710c7967bb", TimeStamp: 05/27/2020 03:11:18, ProcessId: 2932, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 10:11:18.612 +07:00 [Error] Unknown client or not enabled: "angular_spa"
+AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "4a8938a906484d689a2154ce546aa76c"), ("nonce": "7cc376214f0444b9863c9d45fde6b958")] }
+2020-05-27 10:11:18.612 +07:00 [Error] Request validation failed
+2020-05-27 10:11:18.613 +07:00 [Information] AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "4a8938a906484d689a2154ce546aa76c"), ("nonce": "7cc376214f0444b9863c9d45fde6b958")] }
+2020-05-27 10:11:18.613 +07:00 [Information] TokenIssuedFailureEvent { ClientId: "angular_spa", ClientName: null, RedirectUri: null, Endpoint: "Authorize", SubjectId: null, Scopes: "", GrantType: null, Error: "unauthorized_client", ErrorDescription: "Unknown client or client not enabled", Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "80000054-0000-f800-b63f-84710c7967bb", TimeStamp: 05/27/2020 03:11:18, ProcessId: 2932, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 10:55:46.882 +07:00 [Information] Starting IdentityServer4 version "3.1.3.0"
+2020-05-27 10:55:46.923 +07:00 [Information] Using the default authentication scheme "Identity.Application" for IdentityServer
+2020-05-27 10:56:01.231 +07:00 [Warning] CorsPolicyService did not allow origin: "http://localhost:8084"
+2020-05-27 10:56:01.241 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 10:56:01.615 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 10:56:02.144 +07:00 [Error] Invalid client configuration for client "angular_spa": "AllowedCorsOrigins contains invalid origin: http://localhost:8084/cmssmartlife"
+2020-05-27 10:56:02.200 +07:00 [Information] InvalidClientConfigurationEvent { ClientId: "angular_spa", ClientName: "Angular SPA", Category: "Error", Name: "Invalid Client Configuration", EventType: Error, Id: 3001, Message: "AllowedCorsOrigins contains invalid origin: http://localhost:8084/cmssmartlife", ActivityId: "8000002d-0003-f800-b63f-84710c7967bb", TimeStamp: 05/27/2020 03:56:02, ProcessId: 5184, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 10:56:02.228 +07:00 [Error] Unknown client or not enabled: "angular_spa"
+AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "d3edf36417e140e2bdb9915bdecb6955"), ("nonce": "1530596a688c43c1b829cbdda19780ff")] }
+2020-05-27 10:56:02.232 +07:00 [Error] Request validation failed
+2020-05-27 10:56:02.232 +07:00 [Information] AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "d3edf36417e140e2bdb9915bdecb6955"), ("nonce": "1530596a688c43c1b829cbdda19780ff")] }
+2020-05-27 10:56:02.249 +07:00 [Information] TokenIssuedFailureEvent { ClientId: "angular_spa", ClientName: null, RedirectUri: null, Endpoint: "Authorize", SubjectId: null, Scopes: "", GrantType: null, Error: "unauthorized_client", ErrorDescription: "Unknown client or client not enabled", Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "8000002d-0003-f800-b63f-84710c7967bb", TimeStamp: 05/27/2020 03:56:02, ProcessId: 5184, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 10:56:16.847 +07:00 [Information] Removing 0 grants
+2020-05-27 10:56:16.867 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 10:56:46.885 +07:00 [Information] Removing 0 grants
+2020-05-27 10:56:46.886 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 10:57:16.897 +07:00 [Information] Removing 0 grants
+2020-05-27 10:57:16.902 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 10:57:46.913 +07:00 [Information] Removing 0 grants
+2020-05-27 10:57:46.917 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 10:58:01.325 +07:00 [Warning] Invalid password for user "9e9cb194-33d4-4039-b740-6274638e30a7".
+2020-05-27 10:58:01.336 +07:00 [Information] UserLoginFailureEvent { Username: "admin", Endpoint: "UI", ClientId: null, Category: "Authentication", Name: "User Login Failure", EventType: Failure, Id: 1001, Message: "invalid credentials", ActivityId: "80000032-0003-f800-b63f-84710c7967bb", TimeStamp: 05/27/2020 03:58:01, ProcessId: 5184, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 10:58:16.927 +07:00 [Information] Removing 0 grants
+2020-05-27 10:58:16.930 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 10:58:46.947 +07:00 [Information] Removing 0 grants
+2020-05-27 10:58:46.948 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 10:59:16.953 +07:00 [Information] Removing 0 grants
+2020-05-27 10:59:16.954 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 10:59:46.968 +07:00 [Information] Removing 0 grants
+2020-05-27 10:59:46.969 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:00:16.985 +07:00 [Information] Removing 0 grants
+2020-05-27 11:00:16.987 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:00:47.005 +07:00 [Information] Removing 0 grants
+2020-05-27 11:00:47.006 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:01:17.023 +07:00 [Information] Removing 0 grants
+2020-05-27 11:01:17.028 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:01:47.032 +07:00 [Information] Removing 0 grants
+2020-05-27 11:01:47.034 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:02:17.050 +07:00 [Information] Removing 0 grants
+2020-05-27 11:02:17.053 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:02:47.063 +07:00 [Information] Removing 0 grants
+2020-05-27 11:02:47.066 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:03:17.082 +07:00 [Information] Removing 0 grants
+2020-05-27 11:03:17.084 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:03:47.098 +07:00 [Information] Removing 0 grants
+2020-05-27 11:03:47.099 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:04:17.111 +07:00 [Information] Removing 0 grants
+2020-05-27 11:04:17.114 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:04:47.125 +07:00 [Information] Removing 0 grants
+2020-05-27 11:04:47.125 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:05:17.137 +07:00 [Information] Removing 0 grants
+2020-05-27 11:05:17.138 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:05:47.155 +07:00 [Information] Removing 0 grants
+2020-05-27 11:05:47.157 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:06:17.169 +07:00 [Information] Removing 0 grants
+2020-05-27 11:06:17.170 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:06:47.173 +07:00 [Information] Removing 0 grants
+2020-05-27 11:06:47.174 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:07:17.176 +07:00 [Information] Removing 0 grants
+2020-05-27 11:07:17.177 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:07:47.189 +07:00 [Information] Removing 0 grants
+2020-05-27 11:07:47.189 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:08:17.202 +07:00 [Information] Removing 0 grants
+2020-05-27 11:08:17.203 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:08:47.218 +07:00 [Information] Removing 0 grants
+2020-05-27 11:08:47.218 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:09:17.234 +07:00 [Information] Removing 0 grants
+2020-05-27 11:09:17.235 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:09:47.251 +07:00 [Information] Removing 0 grants
+2020-05-27 11:09:47.252 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:10:17.266 +07:00 [Information] Removing 0 grants
+2020-05-27 11:10:17.267 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:10:47.279 +07:00 [Information] Removing 0 grants
+2020-05-27 11:10:47.280 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:11:17.283 +07:00 [Information] Removing 0 grants
+2020-05-27 11:11:17.284 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:11:47.294 +07:00 [Information] Removing 0 grants
+2020-05-27 11:11:47.294 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:12:17.306 +07:00 [Information] Removing 0 grants
+2020-05-27 11:12:17.306 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:12:47.311 +07:00 [Information] Removing 0 grants
+2020-05-27 11:12:47.312 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:13:17.325 +07:00 [Information] Removing 0 grants
+2020-05-27 11:13:17.326 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:13:47.337 +07:00 [Information] Removing 0 grants
+2020-05-27 11:13:47.337 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:14:17.369 +07:00 [Information] Removing 0 grants
+2020-05-27 11:14:17.370 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:14:47.372 +07:00 [Information] Removing 0 grants
+2020-05-27 11:14:47.372 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:15:17.377 +07:00 [Information] Removing 0 grants
+2020-05-27 11:15:17.377 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:15:47.390 +07:00 [Information] Removing 0 grants
+2020-05-27 11:15:47.391 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:16:17.404 +07:00 [Information] Removing 0 grants
+2020-05-27 11:16:17.404 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:16:47.406 +07:00 [Information] Removing 0 grants
+2020-05-27 11:16:47.407 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:17:17.418 +07:00 [Information] Removing 0 grants
+2020-05-27 11:17:17.418 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:17:47.420 +07:00 [Information] Removing 0 grants
+2020-05-27 11:17:47.421 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:18:17.423 +07:00 [Information] Removing 0 grants
+2020-05-27 11:18:17.424 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:18:47.426 +07:00 [Information] Removing 0 grants
+2020-05-27 11:18:47.427 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:19:17.437 +07:00 [Information] Removing 0 grants
+2020-05-27 11:19:17.437 +07:00 [Information] Removing 0 device flow codes
+2020-05-27 11:20:45.250 +07:00 [Information] Starting IdentityServer4 version "3.1.3.0"
+2020-05-27 11:20:45.290 +07:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-05-27 11:20:45.295 +07:00 [Information] Using the default authentication scheme "Identity.Application" for IdentityServer
+2020-05-27 11:20:56.631 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 11:20:56.839 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 11:20:56.871 +07:00 [Error] Invalid client configuration for client "angular_spa": "AllowedCorsOrigins contains invalid origin: http://localhost:8084/cmssmartlife"
+2020-05-27 11:20:56.926 +07:00 [Information] InvalidClientConfigurationEvent { ClientId: "angular_spa", ClientName: "Angular SPA", Category: "Error", Name: "Invalid Client Configuration", EventType: Error, Id: 3001, Message: "AllowedCorsOrigins contains invalid origin: http://localhost:8084/cmssmartlife", ActivityId: "80000090-0002-fd00-b63f-84710c7967bb", TimeStamp: 05/27/2020 04:20:56, ProcessId: 7588, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 11:20:56.953 +07:00 [Error] Unknown client or not enabled: "angular_spa"
+AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "bc09d18696c643dfb298db78f709c350"), ("nonce": "1ccb1d8e1b9946739e3d2da404f76f44")] }
+2020-05-27 11:20:56.957 +07:00 [Error] Request validation failed
+2020-05-27 11:20:56.957 +07:00 [Information] AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "bc09d18696c643dfb298db78f709c350"), ("nonce": "1ccb1d8e1b9946739e3d2da404f76f44")] }
+2020-05-27 11:20:56.972 +07:00 [Information] TokenIssuedFailureEvent { ClientId: "angular_spa", ClientName: null, RedirectUri: null, Endpoint: "Authorize", SubjectId: null, Scopes: "", GrantType: null, Error: "unauthorized_client", ErrorDescription: "Unknown client or client not enabled", Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "80000090-0002-fd00-b63f-84710c7967bb", TimeStamp: 05/27/2020 04:20:56, ProcessId: 7588, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 11:24:49.674 +07:00 [Information] Starting IdentityServer4 version "3.1.3.0"
+2020-05-27 11:24:49.711 +07:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-05-27 11:24:49.719 +07:00 [Information] Using the default authentication scheme "Identity.Application" for IdentityServer
+2020-05-27 11:25:01.381 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 11:25:01.612 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 11:25:01.645 +07:00 [Error] Invalid client configuration for client "angular_spa": "AllowedCorsOrigins contains invalid origin: http://localhost:8084/cmssmartlife"
+2020-05-27 11:25:01.701 +07:00 [Information] InvalidClientConfigurationEvent { ClientId: "angular_spa", ClientName: "Angular_SPA", Category: "Error", Name: "Invalid Client Configuration", EventType: Error, Id: 3001, Message: "AllowedCorsOrigins contains invalid origin: http://localhost:8084/cmssmartlife", ActivityId: "80000037-0003-f800-b63f-84710c7967bb", TimeStamp: 05/27/2020 04:25:01, ProcessId: 7124, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 11:25:01.728 +07:00 [Error] Unknown client or not enabled: "angular_spa"
+AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "dc8bbd9330164a22881dfe1cb6c3aa8c"), ("nonce": "b95c7adf109b4205be29baa2fca64b6f")] }
+2020-05-27 11:25:01.731 +07:00 [Error] Request validation failed
+2020-05-27 11:25:01.732 +07:00 [Information] AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "dc8bbd9330164a22881dfe1cb6c3aa8c"), ("nonce": "b95c7adf109b4205be29baa2fca64b6f")] }
+2020-05-27 11:25:01.748 +07:00 [Information] TokenIssuedFailureEvent { ClientId: "angular_spa", ClientName: null, RedirectUri: null, Endpoint: "Authorize", SubjectId: null, Scopes: "", GrantType: null, Error: "unauthorized_client", ErrorDescription: "Unknown client or client not enabled", Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "80000037-0003-f800-b63f-84710c7967bb", TimeStamp: 05/27/2020 04:25:01, ProcessId: 7124, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 11:30:03.812 +07:00 [Information] Starting IdentityServer4 version "3.1.3.0"
+2020-05-27 11:30:03.847 +07:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-05-27 11:30:03.854 +07:00 [Information] Using the default authentication scheme "Identity.Application" for IdentityServer
+2020-05-27 11:30:33.407 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 11:30:33.600 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 11:30:33.655 +07:00 [Error] Invalid client configuration for client "angular_spa": "AllowedCorsOrigins contains invalid origin: http://localhost:8084/cmssmartlife"
+2020-05-27 11:30:33.741 +07:00 [Information] InvalidClientConfigurationEvent { ClientId: "angular_spa", ClientName: "Angular_SPA", Category: "Error", Name: "Invalid Client Configuration", EventType: Error, Id: 3001, Message: "AllowedCorsOrigins contains invalid origin: http://localhost:8084/cmssmartlife", ActivityId: "8000003b-0003-f800-b63f-84710c7967bb", TimeStamp: 05/27/2020 04:30:33, ProcessId: 16616, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 11:30:33.774 +07:00 [Error] Unknown client or not enabled: "angular_spa"
+AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "e73ad8ff9e474b08950b13b72c4d81cf"), ("nonce": "292f38eb6e2a48daafe299404b5249af")] }
+2020-05-27 11:30:33.779 +07:00 [Error] Request validation failed
+2020-05-27 11:30:33.780 +07:00 [Information] AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "e73ad8ff9e474b08950b13b72c4d81cf"), ("nonce": "292f38eb6e2a48daafe299404b5249af")] }
+2020-05-27 11:30:33.798 +07:00 [Information] TokenIssuedFailureEvent { ClientId: "angular_spa", ClientName: null, RedirectUri: null, Endpoint: "Authorize", SubjectId: null, Scopes: "", GrantType: null, Error: "unauthorized_client", ErrorDescription: "Unknown client or client not enabled", Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "8000003b-0003-f800-b63f-84710c7967bb", TimeStamp: 05/27/2020 04:30:33, ProcessId: 16616, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 11:41:27.937 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 11:41:27.970 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 11:41:27.972 +07:00 [Error] Invalid client configuration for client "angular_spa": "AllowedCorsOrigins contains invalid origin: http://localhost:8084/cmssmartlife"
+2020-05-27 11:41:27.973 +07:00 [Information] InvalidClientConfigurationEvent { ClientId: "angular_spa", ClientName: "Angular_SPA", Category: "Error", Name: "Invalid Client Configuration", EventType: Error, Id: 3001, Message: "AllowedCorsOrigins contains invalid origin: http://localhost:8084/cmssmartlife", ActivityId: "80000064-0003-ff00-b63f-84710c7967bb", TimeStamp: 05/27/2020 04:41:27, ProcessId: 16616, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 11:41:27.974 +07:00 [Error] Unknown client or not enabled: "angular_spa"
+AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "0a6a8192a48145bc90e70ec72fdf76e4"), ("nonce": "761da00887b24769ad2c1c0874600535")] }
+2020-05-27 11:41:27.974 +07:00 [Error] Request validation failed
+2020-05-27 11:41:27.974 +07:00 [Information] AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "0a6a8192a48145bc90e70ec72fdf76e4"), ("nonce": "761da00887b24769ad2c1c0874600535")] }
+2020-05-27 11:41:27.975 +07:00 [Information] TokenIssuedFailureEvent { ClientId: "angular_spa", ClientName: null, RedirectUri: null, Endpoint: "Authorize", SubjectId: null, Scopes: "", GrantType: null, Error: "unauthorized_client", ErrorDescription: "Unknown client or client not enabled", Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "80000064-0003-ff00-b63f-84710c7967bb", TimeStamp: 05/27/2020 04:41:27, ProcessId: 16616, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 11:45:54.787 +07:00 [Information] Starting IdentityServer4 version "3.1.3.0"
+2020-05-27 11:45:54.838 +07:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-05-27 11:45:54.845 +07:00 [Information] Using the default authentication scheme "Identity.Application" for IdentityServer
+2020-05-27 11:46:03.624 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 11:46:03.808 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 11:46:03.895 +07:00 [Information] Showing login: User is not authenticated
+2020-05-27 11:46:24.380 +07:00 [Warning] Invalid password for user "9e9cb194-33d4-4039-b740-6274638e30a7".
+2020-05-27 11:46:24.435 +07:00 [Information] UserLoginFailureEvent { Username: "admin", Endpoint: "UI", ClientId: null, Category: "Authentication", Name: "User Login Failure", EventType: Failure, Id: 1001, Message: "invalid credentials", ActivityId: "80000096-0002-fd00-b63f-84710c7967bb", TimeStamp: 05/27/2020 04:46:24, ProcessId: 5328, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 11:46:54.577 +07:00 [Information] UserLoginSuccessEvent { Username: "admin", Provider: null, ProviderUserId: null, SubjectId: "9e9cb194-33d4-4039-b740-6274638e30a7", DisplayName: "Duytuit", Endpoint: "UI", ClientId: null, Category: "Authentication", Name: "User Login Success", EventType: Success, Id: 1000, Message: null, ActivityId: "80000097-0002-fd00-b63f-84710c7967bb", TimeStamp: 05/27/2020 04:46:54, ProcessId: 5328, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 11:46:54.625 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint" for "/connect/authorize/callback"
+2020-05-27 11:46:55.013 +07:00 [Information] TokenIssuedSuccessEvent { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: "http://localhost:8084/cmssmartlife/welcome", Endpoint: "Authorize", SubjectId: "9e9cb194-33d4-4039-b740-6274638e30a7", Scopes: "openid profile email api.read", GrantType: "implicit", Tokens: [Token { TokenType: "id_token", TokenValue: "****tG3g" }, Token { TokenType: "access_token", TokenValue: "****3uAQ" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "80000098-0002-fd00-b63f-84710c7967bb", TimeStamp: 05/27/2020 04:46:54, ProcessId: 5328, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 11:54:18.298 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 11:54:18.327 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 11:54:18.392 +07:00 [Information] TokenIssuedSuccessEvent { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: "http://localhost:8084/cmssmartlife/welcome", Endpoint: "Authorize", SubjectId: "9e9cb194-33d4-4039-b740-6274638e30a7", Scopes: "openid profile email api.read", GrantType: "implicit", Tokens: [Token { TokenType: "id_token", TokenValue: "****XinQ" }, Token { TokenType: "access_token", TokenValue: "****6dUA" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "8000005d-0000-f800-b63f-84710c7967bb", TimeStamp: 05/27/2020 04:54:18, ProcessId: 5328, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 11:55:08.795 +07:00 [Information] Starting IdentityServer4 version "3.1.3.0"
+2020-05-27 11:55:08.829 +07:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-05-27 11:55:08.834 +07:00 [Information] Using the default authentication scheme "Identity.Application" for IdentityServer
+2020-05-27 11:55:09.194 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 11:55:09.417 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 11:55:11.959 +07:00 [Information] TokenIssuedSuccessEvent { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: "http://localhost:8084/cmssmartlife/welcome", Endpoint: "Authorize", SubjectId: "9e9cb194-33d4-4039-b740-6274638e30a7", Scopes: "openid profile email api.read", GrantType: "implicit", Tokens: [Token { TokenType: "id_token", TokenValue: "****3DQw" }, Token { TokenType: "access_token", TokenValue: "****VRmQ" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "8000001a-0002-f800-b63f-84710c7967bb", TimeStamp: 05/27/2020 04:55:11, ProcessId: 9884, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 11:59:46.545 +07:00 [Information] Starting IdentityServer4 version "3.1.3.0"
+2020-05-27 11:59:46.605 +07:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-05-27 11:59:46.626 +07:00 [Information] Using the default authentication scheme "Identity.Application" for IdentityServer
+2020-05-27 12:01:32.406 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 12:01:32.624 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 12:01:35.606 +07:00 [Information] TokenIssuedSuccessEvent { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: "http://localhost:8084/cmssmartlife/welcome", Endpoint: "Authorize", SubjectId: "9e9cb194-33d4-4039-b740-6274638e30a7", Scopes: "openid profile email api.read", GrantType: "implicit", Tokens: [Token { TokenType: "id_token", TokenValue: "****vdiw" }, Token { TokenType: "access_token", TokenValue: "****Muxw" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "8000005f-0000-f800-b63f-84710c7967bb", TimeStamp: 05/27/2020 05:01:35, ProcessId: 13428, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 14:05:29.172 +07:00 [Information] Starting IdentityServer4 version "3.1.3.0"
+2020-05-27 14:05:29.213 +07:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-05-27 14:05:29.219 +07:00 [Information] Using the default authentication scheme "Identity.Application" for IdentityServer
+2020-05-27 14:05:29.458 +07:00 [Warning] CorsPolicyService did not allow origin: "http://localhost:4200"
+2020-05-27 14:05:29.722 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:05:29.893 +07:00 [Warning] CorsPolicyService did not allow origin: "http://localhost:4200"
+2020-05-27 14:05:29.895 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:05:29.910 +07:00 [Warning] CorsPolicyService did not allow origin: "http://localhost:4200"
+2020-05-27 14:05:29.918 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:05:29.925 +07:00 [Warning] CorsPolicyService did not allow origin: "http://localhost:4200"
+2020-05-27 14:05:29.969 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:05:32.604 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 14:05:32.604 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 14:05:32.604 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 14:05:32.604 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 14:05:32.698 +07:00 [Information] Showing login: User is not authenticated
+2020-05-27 14:05:32.698 +07:00 [Information] Showing login: User is not authenticated
+2020-05-27 14:05:32.698 +07:00 [Information] Showing login: User is not authenticated
+2020-05-27 14:05:32.698 +07:00 [Information] Showing login: User is not authenticated
+2020-05-27 14:14:07.879 +07:00 [Information] Starting IdentityServer4 version "3.1.3.0"
+2020-05-27 14:14:07.942 +07:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-05-27 14:14:07.952 +07:00 [Information] Using the default authentication scheme "Identity.Application" for IdentityServer
+2020-05-27 14:14:08.471 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:14:08.738 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 14:14:08.843 +07:00 [Error] Invalid redirect_uri: "http://localhost:8084/cmssmartlife/welcome"
+AuthorizeRequestValidationLog { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: null, AllowedRedirectUris: ["http://localhost:8084/cmssmartlife/"], SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "2d59fb57ffd044c39752c8b7fb7df4e2"), ("nonce": "51551e1985d9422191b2e4888c8ee7b1")] }
+2020-05-27 14:14:08.848 +07:00 [Error] Request validation failed
+2020-05-27 14:14:08.848 +07:00 [Information] AuthorizeRequestValidationLog { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: null, AllowedRedirectUris: ["http://localhost:8084/cmssmartlife/"], SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "2d59fb57ffd044c39752c8b7fb7df4e2"), ("nonce": "51551e1985d9422191b2e4888c8ee7b1")] }
+2020-05-27 14:14:08.885 +07:00 [Information] TokenIssuedFailureEvent { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: null, Endpoint: "Authorize", SubjectId: null, Scopes: "", GrantType: null, Error: "unauthorized_client", ErrorDescription: "Invalid redirect_uri", Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "8000003e-0000-fa00-b63f-84710c7967bb", TimeStamp: 05/27/2020 07:14:08, ProcessId: 7676, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 14:16:30.174 +07:00 [Information] Starting IdentityServer4 version "3.1.3.0"
+2020-05-27 14:16:30.210 +07:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-05-27 14:16:30.216 +07:00 [Information] Using the default authentication scheme "Identity.Application" for IdentityServer
+2020-05-27 14:16:46.991 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:16:47.168 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 14:16:47.263 +07:00 [Error] Invalid redirect_uri: "http://localhost:8084/cmssmartlife/welcome"
+AuthorizeRequestValidationLog { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: null, AllowedRedirectUris: ["http://localhost:8084/cmssmartlife/"], SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "eee284d33bc84bf58352f3bc37d94dad"), ("nonce": "9cfdd8bc940042af96963bd4dd5d67fe")] }
+2020-05-27 14:16:47.269 +07:00 [Error] Request validation failed
+2020-05-27 14:16:47.269 +07:00 [Information] AuthorizeRequestValidationLog { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: null, AllowedRedirectUris: ["http://localhost:8084/cmssmartlife/"], SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "eee284d33bc84bf58352f3bc37d94dad"), ("nonce": "9cfdd8bc940042af96963bd4dd5d67fe")] }
+2020-05-27 14:16:47.319 +07:00 [Information] TokenIssuedFailureEvent { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: null, Endpoint: "Authorize", SubjectId: null, Scopes: "", GrantType: null, Error: "unauthorized_client", ErrorDescription: "Invalid redirect_uri", Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "80000034-0001-ff00-b63f-84710c7967bb", TimeStamp: 05/27/2020 07:16:47, ProcessId: 3888, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 14:18:36.904 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:18:36.934 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 14:18:36.938 +07:00 [Error] Invalid redirect_uri: "http://localhost:8084/cmssmartlife/welcome"
+AuthorizeRequestValidationLog { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: null, AllowedRedirectUris: ["http://localhost:8084/cmssmartlife/"], SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "0a18d733ccf647fa9210c021303d0091"), ("nonce": "9674866d52214c0b8c000900fb508c92")] }
+2020-05-27 14:18:36.938 +07:00 [Error] Request validation failed
+2020-05-27 14:18:36.939 +07:00 [Information] AuthorizeRequestValidationLog { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: null, AllowedRedirectUris: ["http://localhost:8084/cmssmartlife/"], SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "0a18d733ccf647fa9210c021303d0091"), ("nonce": "9674866d52214c0b8c000900fb508c92")] }
+2020-05-27 14:18:36.941 +07:00 [Information] TokenIssuedFailureEvent { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: null, Endpoint: "Authorize", SubjectId: null, Scopes: "", GrantType: null, Error: "unauthorized_client", ErrorDescription: "Invalid redirect_uri", Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "80000036-0001-ff00-b63f-84710c7967bb", TimeStamp: 05/27/2020 07:18:36, ProcessId: 3888, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 14:21:43.316 +07:00 [Warning] CorsPolicyService did not allow origin: "http://localhost:4200"
+2020-05-27 14:21:43.337 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:21:43.368 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 14:21:43.371 +07:00 [Error] Invalid redirect_uri: "http://localhost:8084/cmssmartlife"
+AuthorizeRequestValidationLog { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: null, AllowedRedirectUris: ["http://localhost:8084/cmssmartlife/"], SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "12e049065e584b12b27a52da5a9b12bb"), ("nonce": "d11271a7f2314056bacb722263312fc3")] }
+2020-05-27 14:21:43.371 +07:00 [Error] Request validation failed
+2020-05-27 14:21:43.371 +07:00 [Information] AuthorizeRequestValidationLog { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: null, AllowedRedirectUris: ["http://localhost:8084/cmssmartlife/"], SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "12e049065e584b12b27a52da5a9b12bb"), ("nonce": "d11271a7f2314056bacb722263312fc3")] }
+2020-05-27 14:21:43.372 +07:00 [Information] TokenIssuedFailureEvent { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: null, Endpoint: "Authorize", SubjectId: null, Scopes: "", GrantType: null, Error: "unauthorized_client", ErrorDescription: "Invalid redirect_uri", Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "80000051-0003-f800-b63f-84710c7967bb", TimeStamp: 05/27/2020 07:21:43, ProcessId: 3888, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 14:25:02.410 +07:00 [Information] Starting IdentityServer4 version "3.1.3.0"
+2020-05-27 14:25:02.480 +07:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-05-27 14:25:02.495 +07:00 [Information] Using the default authentication scheme "Identity.Application" for IdentityServer
+2020-05-27 14:26:59.351 +07:00 [Information] Starting IdentityServer4 version "3.1.3.0"
+2020-05-27 14:26:59.390 +07:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-05-27 14:26:59.395 +07:00 [Information] Using the default authentication scheme "Identity.Application" for IdentityServer
+2020-05-27 14:27:12.006 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:27:12.200 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 14:27:12.298 +07:00 [Information] Showing login: User is not authenticated
+2020-05-27 14:27:40.881 +07:00 [Information] UserLoginSuccessEvent { Username: "admin", Provider: null, ProviderUserId: null, SubjectId: "9e9cb194-33d4-4039-b740-6274638e30a7", DisplayName: "Duytuit", Endpoint: "UI", ClientId: null, Category: "Authentication", Name: "User Login Success", EventType: Success, Id: 1000, Message: null, ActivityId: "8000005b-0001-fc00-b63f-84710c7967bb", TimeStamp: 05/27/2020 07:27:40, ProcessId: 2784, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 14:27:40.949 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint" for "/connect/authorize/callback"
+2020-05-27 14:27:41.366 +07:00 [Information] TokenIssuedSuccessEvent { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: "http://localhost:8084/cmssmartlife", Endpoint: "Authorize", SubjectId: "9e9cb194-33d4-4039-b740-6274638e30a7", Scopes: "openid profile email api.read", GrantType: "implicit", Tokens: [Token { TokenType: "id_token", TokenValue: "****5PXg" }, Token { TokenType: "access_token", TokenValue: "****W6jw" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "8000005c-0001-fc00-b63f-84710c7967bb", TimeStamp: 05/27/2020 07:27:41, ProcessId: 2784, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 14:27:43.103 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:27:43.273 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryKeyEndpoint" for "/.well-known/openid-configuration/jwks"
+2020-05-27 14:27:43.342 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2020-05-27 14:27:43.471 +07:00 [Information] Profile service returned the following claim types: "sub AspNet.Identity.SecurityStamp userName name email role preferred_username email email_verified"
+2020-05-27 14:27:43.494 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-05-27 14:28:08.046 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 14:28:08.070 +07:00 [Information] TokenIssuedSuccessEvent { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: "http://localhost:8084/cmssmartlife", Endpoint: "Authorize", SubjectId: "9e9cb194-33d4-4039-b740-6274638e30a7", Scopes: "openid profile email api.read", GrantType: "implicit", Tokens: [Token { TokenType: "id_token", TokenValue: "****V_hg" }, Token { TokenType: "access_token", TokenValue: "****7DlA" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "8000005e-0001-fc00-b63f-84710c7967bb", TimeStamp: 05/27/2020 07:28:08, ProcessId: 2784, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 14:28:09.483 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:28:09.524 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:28:09.560 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-05-27 14:28:09.580 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryKeyEndpoint" for "/.well-known/openid-configuration/jwks"
+2020-05-27 14:28:09.626 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2020-05-27 14:28:09.648 +07:00 [Information] Profile service returned the following claim types: "sub AspNet.Identity.SecurityStamp userName name email role preferred_username email email_verified"
+2020-05-27 14:29:13.461 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:29:13.529 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-05-27 14:38:12.338 +07:00 [Information] Starting IdentityServer4 version "3.1.3.0"
+2020-05-27 14:38:12.380 +07:00 [Information] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-05-27 14:38:12.386 +07:00 [Information] Using the default authentication scheme "Identity.Application" for IdentityServer
+2020-05-27 14:38:12.898 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:38:13.183 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 14:38:18.607 +07:00 [Information] TokenIssuedSuccessEvent { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: "http://localhost:8084/cmssmartlife", Endpoint: "Authorize", SubjectId: "9e9cb194-33d4-4039-b740-6274638e30a7", Scopes: "openid profile email api.read", GrantType: "implicit", Tokens: [Token { TokenType: "id_token", TokenValue: "****yswA" }, Token { TokenType: "access_token", TokenValue: "****q56g" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "8000005b-0002-fa00-b63f-84710c7967bb", TimeStamp: 05/27/2020 07:38:18, ProcessId: 16180, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 14:38:20.771 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:38:20.890 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryKeyEndpoint" for "/.well-known/openid-configuration/jwks"
+2020-05-27 14:38:21.041 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2020-05-27 14:38:21.351 +07:00 [Information] Profile service returned the following claim types: "sub AspNet.Identity.SecurityStamp userName name email role preferred_username email email_verified"
+2020-05-27 14:38:21.385 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-05-27 14:38:38.750 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.EndSessionEndpoint" for "/connect/endsession"
+2020-05-27 14:38:38.797 +07:00 [Information] End session request validation success
+EndSessionRequestValidationLog { ClientId: "angular_spa", ClientName: "Angular_SPA", SubjectId: "9e9cb194-33d4-4039-b740-6274638e30a7", PostLogOutUri: "http://localhost:8084/cmssmartlife", State: null, Raw: [("id_token_hint": "***REDACTED***"), ("post_logout_redirect_uri": "http://localhost:8084/cmssmartlife")] }
+2020-05-27 14:38:42.254 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:38:42.278 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 14:38:42.283 +07:00 [Information] Showing login: User is not authenticated
+2020-05-27 14:38:44.511 +07:00 [Information] UserLoginSuccessEvent { Username: "admin", Provider: null, ProviderUserId: null, SubjectId: "9e9cb194-33d4-4039-b740-6274638e30a7", DisplayName: "Duytuit", Endpoint: "UI", ClientId: null, Category: "Authentication", Name: "User Login Success", EventType: Success, Id: 1000, Message: null, ActivityId: "80000061-0002-fa00-b63f-84710c7967bb", TimeStamp: 05/27/2020 07:38:44, ProcessId: 16180, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 14:38:44.548 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint" for "/connect/authorize/callback"
+2020-05-27 14:38:44.575 +07:00 [Information] TokenIssuedSuccessEvent { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: "http://localhost:8084/cmssmartlife", Endpoint: "Authorize", SubjectId: "9e9cb194-33d4-4039-b740-6274638e30a7", Scopes: "openid profile email api.read", GrantType: "implicit", Tokens: [Token { TokenType: "id_token", TokenValue: "****mTpA" }, Token { TokenType: "access_token", TokenValue: "****CcUg" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "80000062-0002-fa00-b63f-84710c7967bb", TimeStamp: 05/27/2020 07:38:44, ProcessId: 16180, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 14:38:45.832 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:38:45.983 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryKeyEndpoint" for "/.well-known/openid-configuration/jwks"
+2020-05-27 14:38:46.040 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2020-05-27 14:38:46.067 +07:00 [Information] Profile service returned the following claim types: "sub AspNet.Identity.SecurityStamp userName name email role preferred_username email email_verified"
+2020-05-27 14:38:46.099 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-05-27 14:38:50.323 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.EndSessionEndpoint" for "/connect/endsession"
+2020-05-27 14:38:50.334 +07:00 [Information] End session request validation success
+EndSessionRequestValidationLog { ClientId: "angular_spa", ClientName: "Angular_SPA", SubjectId: "9e9cb194-33d4-4039-b740-6274638e30a7", PostLogOutUri: "http://localhost:8084/cmssmartlife", State: null, Raw: [("id_token_hint": "***REDACTED***"), ("post_logout_redirect_uri": "http://localhost:8084/cmssmartlife")] }
+2020-05-27 14:38:53.364 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:38:53.400 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 14:38:53.404 +07:00 [Information] Showing login: User is not authenticated
+2020-05-27 14:38:55.412 +07:00 [Information] UserLoginSuccessEvent { Username: "admin", Provider: null, ProviderUserId: null, SubjectId: "9e9cb194-33d4-4039-b740-6274638e30a7", DisplayName: "Duytuit", Endpoint: "UI", ClientId: null, Category: "Authentication", Name: "User Login Success", EventType: Success, Id: 1000, Message: null, ActivityId: "80000068-0002-fa00-b63f-84710c7967bb", TimeStamp: 05/27/2020 07:38:55, ProcessId: 16180, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 14:38:55.423 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeCallbackEndpoint" for "/connect/authorize/callback"
+2020-05-27 14:38:55.442 +07:00 [Information] TokenIssuedSuccessEvent { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: "http://localhost:8084/cmssmartlife", Endpoint: "Authorize", SubjectId: "9e9cb194-33d4-4039-b740-6274638e30a7", Scopes: "openid profile email api.read", GrantType: "implicit", Tokens: [Token { TokenType: "id_token", TokenValue: "****tshQ" }, Token { TokenType: "access_token", TokenValue: "****FniQ" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "80000069-0002-fa00-b63f-84710c7967bb", TimeStamp: 05/27/2020 07:38:55, ProcessId: 16180, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 14:38:56.634 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:38:56.685 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryKeyEndpoint" for "/.well-known/openid-configuration/jwks"
+2020-05-27 14:38:56.750 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2020-05-27 14:38:56.810 +07:00 [Information] Profile service returned the following claim types: "sub AspNet.Identity.SecurityStamp userName name email role preferred_username email email_verified"
+2020-05-27 14:38:56.828 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"
+2020-05-27 14:41:42.496 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:41:42.545 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-27 14:41:42.628 +07:00 [Information] TokenIssuedSuccessEvent { ClientId: "angular_spa", ClientName: "Angular_SPA", RedirectUri: "http://localhost:8084/cmssmartlife", Endpoint: "Authorize", SubjectId: "9e9cb194-33d4-4039-b740-6274638e30a7", Scopes: "openid profile email api.read", GrantType: "implicit", Tokens: [Token { TokenType: "id_token", TokenValue: "****zqpQ" }, Token { TokenType: "access_token", TokenValue: "****ox6g" }], Category: "Token", Name: "Token Issued Success", EventType: Success, Id: 2000, Message: null, ActivityId: "80000084-0003-ff00-b63f-84710c7967bb", TimeStamp: 05/27/2020 07:41:42, ProcessId: 16180, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-27 14:41:44.025 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-27 14:41:44.147 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryKeyEndpoint" for "/.well-known/openid-configuration/jwks"
+2020-05-27 14:41:44.199 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2020-05-27 14:41:44.218 +07:00 [Information] Profile service returned the following claim types: "sub AspNet.Identity.SecurityStamp userName name email role preferred_username email email_verified"
+2020-05-27 14:41:44.240 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.CheckSessionEndpoint" for "/connect/checksession"

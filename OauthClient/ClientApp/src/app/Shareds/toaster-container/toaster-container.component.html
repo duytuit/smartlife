@@ -1,0 +1,6 @@
+<app-toaster  *ngFor="let toast of toasts; let i=index" 
+[toast]="toast" [i]="i"
+(remove)="remove(i)"></app-toaster>
+
+<!-- <pre>toast$: {{ this.toaster.toast$ | async | json }}</pre>
+<pre>toasts: {{ toasts | json }}</pre> -->

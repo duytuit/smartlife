@@ -1,0 +1,15 @@
+D:\Dev\backend\DxmbAspNetCore\ConsoleCreateAccountMqtt\bin\Debug\netcoreapp3.1\ConsoleCreateAccountMqtt.exe
+D:\Dev\backend\DxmbAspNetCore\ConsoleCreateAccountMqtt\obj\Debug\netcoreapp3.1\ConsoleCreateAccountMqtt.AssemblyInfoInputs.cache
+D:\Dev\backend\DxmbAspNetCore\ConsoleCreateAccountMqtt\obj\Debug\netcoreapp3.1\ConsoleCreateAccountMqtt.AssemblyInfo.cs
+D:\Dev\backend\DxmbAspNetCore\ConsoleCreateAccountMqtt\bin\Debug\netcoreapp3.1\ConsoleCreateAccountMqtt.deps.json
+D:\Dev\backend\DxmbAspNetCore\ConsoleCreateAccountMqtt\bin\Debug\netcoreapp3.1\ConsoleCreateAccountMqtt.runtimeconfig.json
+D:\Dev\backend\DxmbAspNetCore\ConsoleCreateAccountMqtt\bin\Debug\netcoreapp3.1\ConsoleCreateAccountMqtt.runtimeconfig.dev.json
+D:\Dev\backend\DxmbAspNetCore\ConsoleCreateAccountMqtt\bin\Debug\netcoreapp3.1\ConsoleCreateAccountMqtt.dll
+D:\Dev\backend\DxmbAspNetCore\ConsoleCreateAccountMqtt\bin\Debug\netcoreapp3.1\ConsoleCreateAccountMqtt.pdb
+D:\Dev\backend\DxmbAspNetCore\ConsoleCreateAccountMqtt\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Dev\backend\DxmbAspNetCore\ConsoleCreateAccountMqtt\obj\Debug\netcoreapp3.1\ConsoleCreateAccountMqtt.csprojAssemblyReference.cache
+D:\Dev\backend\DxmbAspNetCore\ConsoleCreateAccountMqtt\obj\Debug\netcoreapp3.1\ConsoleCreateAccountMqtt.csproj.CoreCompileInputs.cache
+D:\Dev\backend\DxmbAspNetCore\ConsoleCreateAccountMqtt\obj\Debug\netcoreapp3.1\ConsoleCreateAccountMqtt.csproj.CopyComplete
+D:\Dev\backend\DxmbAspNetCore\ConsoleCreateAccountMqtt\obj\Debug\netcoreapp3.1\ConsoleCreateAccountMqtt.dll
+D:\Dev\backend\DxmbAspNetCore\ConsoleCreateAccountMqtt\obj\Debug\netcoreapp3.1\ConsoleCreateAccountMqtt.pdb
+D:\Dev\backend\DxmbAspNetCore\ConsoleCreateAccountMqtt\obj\Debug\netcoreapp3.1\ConsoleCreateAccountMqtt.genruntimeconfig.cache

@@ -1,0 +1,119 @@
+2020-05-26 23:34:25.443 +07:00 [Information] Starting IdentityServer4 version "3.1.3.0"
+2020-05-26 23:34:25.756 +07:00 [Information] Using the default authentication scheme "Identity.Application" for IdentityServer
+2020-05-26 23:34:48.821 +07:00 [Warning] CorsPolicyService did not allow origin: "http://localhost:8084"
+2020-05-26 23:34:48.852 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-26 23:34:49.944 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-26 23:34:50.781 +07:00 [Error] Invalid client configuration for client "angular_spa": "AllowedCorsOrigins contains invalid origin: http://localhost:8084/cmssmartlife"
+2020-05-26 23:34:50.851 +07:00 [Information] InvalidClientConfigurationEvent { ClientId: "angular_spa", ClientName: "Angular SPA", Category: "Error", Name: "Invalid Client Configuration", EventType: Error, Id: 3001, Message: "AllowedCorsOrigins contains invalid origin: http://localhost:8084/cmssmartlife", ActivityId: "8000000a-0003-f800-b63f-84710c7967bb", TimeStamp: 05/26/2020 16:34:50, ProcessId: 7600, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-26 23:34:50.887 +07:00 [Error] Unknown client or not enabled: "angular_spa"
+AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "abf07df4579540dda58d70639b9de3dc"), ("nonce": "582e53053ed74e35a7c434ba1632a5c1")] }
+2020-05-26 23:34:50.897 +07:00 [Error] Request validation failed
+2020-05-26 23:34:50.897 +07:00 [Information] AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "abf07df4579540dda58d70639b9de3dc"), ("nonce": "582e53053ed74e35a7c434ba1632a5c1")] }
+2020-05-26 23:34:50.918 +07:00 [Information] TokenIssuedFailureEvent { ClientId: "angular_spa", ClientName: null, RedirectUri: null, Endpoint: "Authorize", SubjectId: null, Scopes: "", GrantType: null, Error: "unauthorized_client", ErrorDescription: "Unknown client or client not enabled", Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "8000000a-0003-f800-b63f-84710c7967bb", TimeStamp: 05/26/2020 16:34:50, ProcessId: 7600, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-26 23:34:55.521 +07:00 [Information] Removing 0 grants
+2020-05-26 23:34:55.554 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:35:25.585 +07:00 [Information] Removing 0 grants
+2020-05-26 23:35:25.588 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:35:55.609 +07:00 [Information] Removing 0 grants
+2020-05-26 23:35:55.613 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:36:25.640 +07:00 [Information] Removing 0 grants
+2020-05-26 23:36:25.653 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:36:55.679 +07:00 [Information] Removing 0 grants
+2020-05-26 23:36:55.689 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:37:25.713 +07:00 [Information] Removing 0 grants
+2020-05-26 23:37:25.719 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:37:55.726 +07:00 [Information] Removing 0 grants
+2020-05-26 23:37:55.728 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:38:01.890 +07:00 [Warning] CorsPolicyService did not allow origin: "http://localhost:8084"
+2020-05-26 23:38:01.895 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2020-05-26 23:38:01.929 +07:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2020-05-26 23:38:01.953 +07:00 [Error] Invalid client configuration for client "angular_spa": "AllowedCorsOrigins contains invalid origin: http://localhost:8084/cmssmartlife"
+2020-05-26 23:38:01.954 +07:00 [Information] InvalidClientConfigurationEvent { ClientId: "angular_spa", ClientName: "Angular SPA", Category: "Error", Name: "Invalid Client Configuration", EventType: Error, Id: 3001, Message: "AllowedCorsOrigins contains invalid origin: http://localhost:8084/cmssmartlife", ActivityId: "8000002e-0001-fc00-b63f-84710c7967bb", TimeStamp: 05/26/2020 16:38:01, ProcessId: 7600, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-26 23:38:01.955 +07:00 [Error] Unknown client or not enabled: "angular_spa"
+AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "c5910f768d774ba89be37a590a23796d"), ("nonce": "969f507c742f4ac8b1eeed7b1f9931dd")] }
+2020-05-26 23:38:01.956 +07:00 [Error] Request validation failed
+2020-05-26 23:38:01.956 +07:00 [Information] AuthorizeRequestValidationLog { ClientId: null, ClientName: null, RedirectUri: null, AllowedRedirectUris: null, SubjectId: "anonymous", ResponseType: null, ResponseMode: null, GrantType: null, RequestedScopes: "", State: null, UiLocales: null, Nonce: null, AuthenticationContextReferenceClasses: null, DisplayMode: null, PromptMode: null, MaxAge: null, LoginHint: null, SessionId: null, Raw: [("client_id": "angular_spa"), ("redirect_uri": "http://localhost:8084/cmssmartlife/welcome"), ("response_type": "id_token token"), ("scope": "openid profile email api.read"), ("state": "c5910f768d774ba89be37a590a23796d"), ("nonce": "969f507c742f4ac8b1eeed7b1f9931dd")] }
+2020-05-26 23:38:01.956 +07:00 [Information] TokenIssuedFailureEvent { ClientId: "angular_spa", ClientName: null, RedirectUri: null, Endpoint: "Authorize", SubjectId: null, Scopes: "", GrantType: null, Error: "unauthorized_client", ErrorDescription: "Unknown client or client not enabled", Category: "Token", Name: "Token Issued Failure", EventType: Failure, Id: 2001, Message: null, ActivityId: "8000002e-0001-fc00-b63f-84710c7967bb", TimeStamp: 05/26/2020 16:38:01, ProcessId: 7600, LocalIpAddress: "::1:8081", RemoteIpAddress: "::1" }
+2020-05-26 23:38:25.745 +07:00 [Information] Removing 0 grants
+2020-05-26 23:38:25.753 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:38:55.773 +07:00 [Information] Removing 0 grants
+2020-05-26 23:38:55.779 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:39:25.789 +07:00 [Information] Removing 0 grants
+2020-05-26 23:39:25.795 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:39:55.803 +07:00 [Information] Removing 0 grants
+2020-05-26 23:39:55.805 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:40:25.820 +07:00 [Information] Removing 0 grants
+2020-05-26 23:40:25.825 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:40:55.835 +07:00 [Information] Removing 0 grants
+2020-05-26 23:40:55.840 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:41:25.863 +07:00 [Information] Removing 0 grants
+2020-05-26 23:41:25.866 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:41:55.890 +07:00 [Information] Removing 0 grants
+2020-05-26 23:41:55.899 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:42:25.914 +07:00 [Information] Removing 0 grants
+2020-05-26 23:42:25.917 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:42:55.926 +07:00 [Information] Removing 0 grants
+2020-05-26 23:42:55.929 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:43:25.943 +07:00 [Information] Removing 0 grants
+2020-05-26 23:43:25.946 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:43:55.959 +07:00 [Information] Removing 0 grants
+2020-05-26 23:43:55.961 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:44:25.975 +07:00 [Information] Removing 0 grants
+2020-05-26 23:44:25.979 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:44:55.991 +07:00 [Information] Removing 0 grants
+2020-05-26 23:44:55.998 +07:00 [Information] Removing 0 device flow codes
+2020-05-26 23:45:16.912 +07:00 [Information] Starting IdentityServer4 version "3.1.3.0"
+2020-05-26 23:45:17.113 +07:00 [Fatal] No storage mechanism for clients specified. Use the 'AddInMemoryClients' extension method to register a development version.
+2020-05-26 23:45:17.158 +07:00 [Fatal] Application startup exception
+System.InvalidOperationException: No storage mechanism for clients specified. Use the 'AddInMemoryClients' extension method to register a development version.
+   at Microsoft.AspNetCore.Builder.IdentityServerApplicationBuilderExtensions.TestService(IServiceProvider serviceProvider, Type service, ILogger logger, String message, Boolean doThrow)
+   at Microsoft.AspNetCore.Builder.IdentityServerApplicationBuilderExtensions.Validate(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Builder.IdentityServerApplicationBuilderExtensions.UseIdentityServer(IApplicationBuilder app, IdentityServerMiddlewareOptions options)
+   at Auth.Server.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory) in D:\Dev\Auth.Server\Auth.Server\Startup.cs:line 140
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass13_0.<UseStartup>b__2(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISServerSetupFilter.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2020-05-26 23:45:31.633 +07:00 [Information] Starting IdentityServer4 version "3.1.3.0"
+2020-05-26 23:45:31.840 +07:00 [Fatal] No storage mechanism for clients specified. Use the 'AddInMemoryClients' extension method to register a development version.
+2020-05-26 23:45:31.871 +07:00 [Fatal] Application startup exception
+System.InvalidOperationException: No storage mechanism for clients specified. Use the 'AddInMemoryClients' extension method to register a development version.
+   at Microsoft.AspNetCore.Builder.IdentityServerApplicationBuilderExtensions.TestService(IServiceProvider serviceProvider, Type service, ILogger logger, String message, Boolean doThrow)
+   at Microsoft.AspNetCore.Builder.IdentityServerApplicationBuilderExtensions.Validate(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Builder.IdentityServerApplicationBuilderExtensions.UseIdentityServer(IApplicationBuilder app, IdentityServerMiddlewareOptions options)
+   at Auth.Server.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory) in D:\Dev\Auth.Server\Auth.Server\Startup.cs:line 140
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass13_0.<UseStartup>b__2(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISServerSetupFilter.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2020-05-26 23:46:01.584 +07:00 [Error] Exception removing expired grants: "Cannot access a disposed object.
+Object name: 'IServiceProvider'."
+2020-05-26 23:46:38.615 +07:00 [Information] Starting IdentityServer4 version "3.1.3.0"
+2020-05-26 23:46:38.815 +07:00 [Fatal] No storage mechanism for clients specified. Use the 'AddInMemoryClients' extension method to register a development version.
+2020-05-26 23:46:38.845 +07:00 [Fatal] Application startup exception
+System.InvalidOperationException: No storage mechanism for clients specified. Use the 'AddInMemoryClients' extension method to register a development version.
+   at Microsoft.AspNetCore.Builder.IdentityServerApplicationBuilderExtensions.TestService(IServiceProvider serviceProvider, Type service, ILogger logger, String message, Boolean doThrow)
+   at Microsoft.AspNetCore.Builder.IdentityServerApplicationBuilderExtensions.Validate(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Builder.IdentityServerApplicationBuilderExtensions.UseIdentityServer(IApplicationBuilder app, IdentityServerMiddlewareOptions options)
+   at Auth.Server.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory) in D:\Dev\Auth.Server\Auth.Server\Startup.cs:line 140
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass13_0.<UseStartup>b__2(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISServerSetupFilter.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2020-05-26 23:47:08.558 +07:00 [Error] Exception removing expired grants: "Cannot access a disposed object.
+Object name: 'IServiceProvider'."
